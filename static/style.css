@@ -1,0 +1,227 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Font
+
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 500, 600
+
+*/
+
+:root{
+    /* font */
+    --main-font: 'Barlow Semi Condensed', sans-serif;
+    /* font weight */
+    --w-500: 500;
+    --w-600: 600;
+    /*colors*/
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    /* background-images */
+    --only: url('images/bg-pattern-quotation.svg');
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--light-grayish-blue);
+}
+
+#container{
+    width: 1200px;
+    display: grid;
+    grid-template-areas: 
+    'daniel daniel jonathan kira'
+    'jeanette patrick patrick kira';
+    grid-gap: 1rem 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#container #daniel{
+    grid-area: daniel;
+    background-color: var(--moderate-violet);
+    background-image: var(--only);
+    background-repeat: no-repeat;
+    background-position: 80% 0%;
+}
+#container #daniel #daniel-card-header #daniel-title h4{
+    color: hsl(0, 0%, 100%);
+}
+#container #daniel #daniel-card-header #daniel-title h5{
+    color: rgb(255, 255, 255, 0.5);
+    font-weight: var(--w-500);
+}
+#container #daniel #daniel-headline h3{
+    color: hsl(0, 0%, 100%);
+}
+#container #daniel #daniel-para p{
+    color: rgb(255, 255, 255, 0.7);
+    font-weight: var(--w-500);
+}
+#container #kira{
+    grid-area: kira;
+    background-color: var(--white);
+}
+#container #kira #kira-card-header #kira-title h4{
+    color: var(--very-dark-blackish-blue);
+}
+#container #kira #kira-card-header #kira-title h5{
+    color: rgb(25, 33, 46, 0.5);
+    font-weight: var(--w-500);
+}
+#container #kira #kira-headline h3{
+    color: var(--very-dark-blackish-blue);
+}
+#container #kira #kira-para p{
+    color: rgb(25, 33, 46, 0.7);
+    font-weight: var(--w-500);
+}
+#container #jonathan{
+    grid-area: jonathan;
+    background-color: var(--very-dark-grayish-blue);
+}
+#container #jonathan #jonathan-card-header #jonathan-title h4{
+    color: hsl(0, 0%, 100%);
+}
+#container #jonathan #jonathan-card-header #jonathan-title h5{
+    color: rgb(255, 255, 255, 0.5);
+    font-weight: var(--w-500);
+}
+#container #jonathan #jonathan-headline h3{
+    color: hsl(0, 0%, 100%);
+}
+#container #jonathan #jonathan-para p{
+    color: rgb(255, 255, 255, 0.7);
+    font-weight: var(--w-500);
+}
+#container #jeanette{
+    grid-area: jeanette;
+    background-color: var(--white);
+}
+#container #jeanette #jeanette-card-header #jeanette-title h4{
+    color: var(--very-dark-blackish-blue);
+}
+#container #jeanette #jeanette-card-header #jeanette-title h5{
+    color: rgb(25, 33, 46, 0.5);
+    font-weight: var(--w-500);
+}
+#container #jeanette #jeanette-headline h3{
+    color: var(--very-dark-blackish-blue);
+}
+#container #jeanette #jeanette-para p{
+    color: rgb(25, 33, 46, 0.7);
+    font-weight: var(--w-500);
+}
+
+#container #patrick{
+    grid-area: patrick;
+    background-color: var(--very-dark-blackish-blue);
+}
+#container #patrick #patrick-card-header #patrick-title h4{
+    color: hsl(0, 0%, 100%);
+}
+#container #patrick #patrick-card-header #patrick-title h5{
+    color: rgb(255, 255, 255, 0.5);
+    font-weight: var(--w-500);
+}
+#container #patrick #patrick-headline h3{
+    color: hsl(0, 0%, 100%);
+}
+#container #patrick #patrick-para p{
+    color: rgb(255, 255, 255, 0.7);
+    font-weight: var(--w-500);
+}
+
+#container .card{
+    font-family: var(--main-font);
+    padding: 20px ;
+    border-radius: 10px;
+    border-width: 0;
+}
+#container .card .card-header{
+    display: flex;
+    justify-content: left;
+    align-self: center;
+    margin-bottom: 20px;
+}
+#container .card .card-header .img-part{
+    margin-right: 20px;
+}
+#container .card .card-header .img-part img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+#container .card .headline{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1240px){
+    #container{
+        width: 80%;
+        grid-template-areas: 
+        'jeanette jonathan'
+        'patrick daniel'
+        'kira kira';
+        grid-gap: 2rem 2rem;
+        position: static;
+        top: 0%;
+        left: 0%;
+        transform: translate(-0%, -0%);
+        margin: 3rem auto;
+    }
+}
+@media (max-width: 600px){
+    #container{
+        width: 90%;
+        grid-template-areas: 
+        'daniel'
+        'jonathan'
+        'jeanette'
+        'patrick'
+        'kira';
+    }
+}
